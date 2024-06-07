@@ -2,51 +2,59 @@ function setup() {
     let canvas = createCanvas(800, 600);
     canvas.parent('canvas-container');
     background('lightblue');
-    drawFigure();
+    drawFlork();
 }
 
-function drawFigure() {
-    // Cuerpo
+function drawFlork() {
     strokeWeight(6);
     stroke('black');
-    fill('#FFF59D');
-    rect(350, 200, 100, 200);  // Cuerpo
-
+    
+    // Cuerpo
+    fill('lightblue');
+    beginShape();
+    vertex(400, 300);
+    bezierVertex(370, 450, 430, 450, 400, 300);
+    endShape(CLOSE);
+    
     // Cabeza
-    fill('#FFF59D');
-    ellipse(400, 150, 120, 120);  // Cabeza
+    fill('lightblue');
+    beginShape();
+    vertex(400, 300);
+    bezierVertex(370, 200, 430, 200, 400, 300);
+    endShape(CLOSE);
 
     // Ojos
     fill('black');
-    ellipse(380, 140, 20, 20);  // Ojo izquierdo
-    ellipse(420, 140, 20, 20);  // Ojo derecho
+    ellipse(380, 270, 20, 20); // Ojo izquierdo
+    ellipse(420, 270, 20, 20); // Ojo derecho
 
     // Boca
     noFill();
-    stroke('black');
     strokeWeight(4);
-    arc(400, 160, 50, 30, 0, PI);  // Boca
+    arc(400, 310, 50, 20, 0, PI); // Boca
 
     // Brazos
     strokeWeight(6);
-    line(350, 250, 300, 300);  // Brazo izquierdo
-    line(450, 250, 500, 300);  // Brazo derecho
+    line(350, 320, 290, 370); // Brazo izquierdo
+    line(450, 320, 510, 370); // Brazo derecho
 
     // Pastel
     fill('pink');
-    rect(300, 300, 200, 100);  // Base del pastel
+    rect(310, 370, 80, 40); // Base del pastel
     fill('white');
-    rect(330, 270, 140, 50);  // Parte superior del pastel
+    rect(325, 350, 50, 30); // Parte superior del pastel
 
     // Velas
     fill('yellow');
-    rect(360, 260, 10, 20);  // Vela izquierda
-    rect(430, 260, 10, 20);  // Vela derecha
+    rect(345, 330, 10, 20); // Vela
 
     // Fuego de las velas
     fill('orange');
-    ellipse(365, 250, 10, 10);  // Fuego izquierda
-    ellipse(435, 250, 10, 10);  // Fuego derecha
+    ellipse(350, 320, 10, 10); // Fuego
+
+    // Sombrero
+    fill('pink');
+    triangle(390, 250, 410, 250, 400, 220); // Sombrero
 
     // Texto superior
     fill('darkmagenta');
@@ -56,5 +64,5 @@ function drawFigure() {
 
     // Texto inferior
     textSize(40);
-    text("Feliz Cumpleaños", width / 2, 550);
+    text("Feliz Cumpleaños", width / 2, 580);
 }
