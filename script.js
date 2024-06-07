@@ -1,5 +1,6 @@
 function setup() {
-    createCanvas(800, 600);
+    let canvas = createCanvas(800, 600);
+    canvas.parent('canvas-container');
     background('lightblue');
     drawFigure();
 }
@@ -11,115 +12,115 @@ function drawFigure() {
     // Primer segmento
     beginShape();
     noFill();
-    vertex(273.97, -258.28);
-    bezierVertex(273.97, -258.28, 273.97 + 1348.69, -258.28, 273.97 + 1348.69 * 0.11, -258.28 + 1348.69 * 0.11);
-    bezierVertex(273.97 + 1348.69 * 0.11 + 186.17 * 0.93, -258.28 + 1348.69 * 0.11 + 186.17 * 0.93, 273.97 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3, -258.28 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3, 273.97 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89, -258.28 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89);
-    bezierVertex(273.97 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89 + 366.94 * 0.26, -258.28 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89 + 366.94 * 0.26, 273.97 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89 + 366.94 * 0.26 + 80.93 * 0.33, -258.28 + 1348.69 * 0.11 + 186.17 * 0.93 + 118.68 * 0.3 + 26.09 * 0.89 + 366.94 * 0.26 + 80.93 * 0.33);
+    vertex(400, 300);  // Ajusta la posición inicial
+    bezierVertex(400 + 134.87, 300 - 11.44, 400 + 107.51, 300 - 11.44, 400 + 186.17, 300 + 93.86);
+    bezierVertex(400 + 203.9, 300 + 93.86, 400 + 118.68, 300 + 30.91, 400 + 247.8, 300 + 89.43);
+    bezierVertex(400 + 366.94, 300 + 26.42, 400 + 3.64, 300 + 33.88, 400 + 80.93, 300 + 33.88);
     endShape();
 
     // Ojo derecho
     fill('black');
     noStroke();
-    ellipse(205.86, -65.70, 21.84 * 2);
+    ellipse(600, 235, 21.84 * 2);
 
     // Segundo segmento
     noFill();
     stroke('black');
     beginShape();
-    vertex(-40.44, 40.23);
-    bezierVertex(-40.44 + 1202.76 * 0.14, 40.23 + 1202.76 * 0.14, -40.44 + 1202.76 * 0.14 + 1202.76 * 0.14, 40.23 + 1202.76 * 0.14 + 1202.76 * 0.14, -40.44 + 1202.76 * 0.14 + 1202.76 * 0.14 + 1202.76 * 0.14, 40.23 + 1202.76 * 0.14 + 1202.76 * 0.14 + 1202.76 * 0.14);
+    vertex(360, 340);
+    bezierVertex(360 + 120.27, 340 + 14.26, 360 + 120.27 + 120.27, 340 + 14.26 + 120.27, 360 + 120.27 + 120.27 + 120.27, 340 + 14.26 + 120.27 + 120.27);
     endShape();
 
     // Brazo derecho
     beginShape();
-    vertex(-49.72, -102.85);
-    vertex(-49.72 + 68.74 * cos(radians(235.33)), -102.85 + 68.74 * sin(radians(235.33)));
-    vertex(-49.72 + 68.74 * cos(radians(235.33)) + 24.72 * cos(radians(225)), -102.85 + 68.74 * sin(radians(235.33)) + 24.72 * sin(radians(225)));
-    vertex(-49.72 + 68.74 * cos(radians(235.33)) + 24.72 * cos(radians(225)) + 78.61 * cos(radians(130.7)), -102.85 + 68.74 * sin(radians(235.33)) + 24.72 * sin(radians(225)) + 78.61 * sin(radians(130.7)));
+    vertex(350, 450);
+    vertex(350 + 68.74 * cos(radians(235.33)), 450 + 68.74 * sin(radians(235.33)));
+    vertex(350 + 68.74 * cos(radians(235.33)) + 24.72 * cos(radians(225)), 450 + 68.74 * sin(radians(235.33)) + 24.72 * sin(radians(225)));
+    vertex(350 + 68.74 * cos(radians(235.33)) + 24.72 * cos(radians(225)) + 78.61 * cos(radians(130.7)), 450 + 68.74 * sin(radians(235.33)) + 24.72 * sin(radians(225)) + 78.61 * sin(radians(130.7)));
     endShape();
 
     // Pie derecho
     fill('black');
     beginShape();
-    vertex(-159.50, -84.99);
-    vertex(-159.50 - 75.88, -84.99);
-    bezierVertex(-159.50 - 75.88 + 45.07 * cos(radians(302.66)), -84.99 + 45.07 * sin(radians(302.66)), -159.50 - 75.88 + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)), -84.99 + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)), -159.50 - 75.88 + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)), -84.99 + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)));
+    vertex(240, 515);
+    vertex(240 - 75.88, 515);
+    bezierVertex(240 - 75.88 + 45.07 * cos(radians(302.66)), 515 + 45.07 * sin(radians(302.66)), 240 - 75.88 + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)), 515 + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)), 240 - 75.88 + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)) + 45.07 * cos(radians(302.66)), 515 + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)) + 45.07 * sin(radians(302.66)));
     endShape(CLOSE);
 
     // Pie izquierdo
     noFill();
     stroke('black');
     beginShape();
-    vertex(-108.16, -84.99);
-    vertex(-108.16 - 173.34, -84.99);
+    vertex(320, 515);
+    vertex(320 - 173.34, 515);
     endShape();
 
     // Ojo izquierdo
     fill('black');
-    ellipse(117.79, 65.41, 8.52 * 2);
+    ellipse(480, 235, 8.52 * 2);
 
     // Ojo derecho
-    ellipse(-19.49, 77.88, 8.52 * 2);
+    ellipse(380, 245, 8.52 * 2);
 
     // Mejilla izquierda
     fill('pink');
     strokeWeight(8);
     beginShape();
-    vertex(32.75, 126.62);
-    bezierVertex(32.75 + 107.03 * cos(radians(320.51)), 126.62 + 107.03 * sin(radians(320.51)), 32.75 + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)), 126.62 + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)), 32.75 + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)), 126.62 + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)));
+    vertex(432, 235);
+    bezierVertex(432 + 107.03 * cos(radians(320.51)), 235 + 107.03 * sin(radians(320.51)), 432 + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)), 235 + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)), 432 + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)) + 107.03 * cos(radians(320.51)), 235 + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)) + 107.03 * sin(radians(320.51)));
     endShape(CLOSE);
 
     // Cuerpo
     fill('#FFF59D');
     strokeWeight(6);
     beginShape();
-    vertex(-108.62, -78.18);
-    vertex(-108.62, -78.18 + 64.60);
-    vertex(-108.62 - 163.41, -78.18 + 64.60);
-    vertex(-108.62 - 163.41, -78.18);
+    vertex(300, 415);
+    vertex(300, 415 + 64.60);
+    vertex(300 - 163.41, 415 + 64.60);
+    vertex(300 - 163.41, 415);
     endShape(CLOSE);
 
     // Vestido
     fill('#FFC0CB');
     beginShape();
-    vertex(-108.62, -35.40);
-    vertex(-108.62, -35.40 + 21.82);
-    vertex(-108.62 - 163.41, -35.40 + 21.82);
-    vertex(-108.62 - 163.41, -35.40);
+    vertex(300, 445);
+    vertex(300, 445 + 21.82);
+    vertex(300 - 163.41, 445 + 21.82);
+    vertex(300 - 163.41, 445);
     endShape(CLOSE);
 
     // Banda del vestido
     fill('#FFF59D');
     beginShape();
-    vertex(-171.94, -13.58);
-    vertex(-171.94, -13.58 + 29.94);
-    vertex(-171.94 - 26.09, -13.58 + 29.94);
-    vertex(-171.94 - 26.09, -13.58);
+    vertex(230, 475);
+    vertex(230, 475 + 29.94);
+    vertex(230 - 26.09, 475 + 29.94);
+    vertex(230 - 26.09, 475);
     endShape(CLOSE);
 
     // Detalle de la banda
     noFill();
     beginShape();
-    vertex(-184.98, 16.36);
-    vertex(-184.98, 16.36 + 10.69);
+    vertex(215, 505);
+    vertex(215, 505 + 10.69);
     endShape();
 
     // Botón del vestido
     fill('orange');
     beginShape();
-    vertex(-177.07, 27.06);
-    vertex(-177.07 + 22.56 * cos(radians(111.7)), 27.06 + 22.56 * sin(radians(111.7)));
-    vertex(-177.07 + 22.56 * cos(radians(111.7)) + 22.56 * cos(radians(248.3)), 27.06 + 22.56 * sin(radians(111.7)) + 22.56 * sin(radians(248.3)));
-    vertex(-177.07 + 22.56 * cos(radians(111.7)) + 22.56 * cos(radians(248.3)) + 16.68, 27.06 + 22.56 * sin(radians(111.7)) + 22.56 * sin(radians(248.3)));
+    vertex(225, 515);
+    vertex(225 + 22.56 * cos(radians(111.7)), 515 + 22.56 * sin(radians(111.7)));
+    vertex(225 + 22.56 * cos(radians(111.7)) + 22.56 * cos(radians(248.3)), 515 + 22.56 * sin(radians(111.7)) + 22.56 * sin(radians(248.3)));
+    vertex(225 + 22.56 * cos(radians(111.7)) + 22.56 * cos(radians(248.3)) + 16.68, 515 + 22.56 * sin(radians(111.7)) + 22.56 * sin(radians(248.3)));
     endShape(CLOSE);
 
     // Texto superior
     fill('darkmagenta');
     textSize(60);
     textAlign(RIGHT);
-    text("Wendy", -50, 200);
+    text("Wendy", 400, 100);
 
     // Texto inferior
     textSize(40);
-    text("Feliz Cumpleaños", 310, -320);
+    text("Feliz Cumpleaños", 600, 550);
 }
